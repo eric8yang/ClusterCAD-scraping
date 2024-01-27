@@ -64,7 +64,7 @@ if __name__ == '__main__':
     tableBody = table.find_all('tbody')[0]
 
     bgc_values = []
-    for row in tableBody.find_all('tr')[:3]:
+    for row in tableBody.find_all('tr'):
         #constants values
         row_values = row.find_all('td')
         is_reviewed = True if row_values[-1].text.strip() == 'Y' else False
